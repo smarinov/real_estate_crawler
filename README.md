@@ -30,3 +30,5 @@ Real estate crawler for https://www.alo.bg
 - Type "scrapy crawl RealEstate" in the terminal
 - Input your starting URL
 - Wait for the crawler to finish and navigate to the created database to access the gathered data
+
+![Screenshot](crawling.png)
