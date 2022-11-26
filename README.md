@@ -1,4 +1,4 @@
-# Real Estate Crawler via Scrapy
+# Real Estate Crawler with Scrapy
 Real estate crawler for https://www.alo.bg 
 
 ## How it works?
