@@ -32,7 +32,11 @@ Real estate crawler for https://www.alo.bg
 - Wait for the crawler to finish and navigate to the created database to access the gathered data
 
 ## Tutorial screenshots provided below.
+- Initialize
 ![Screenshot](tutorial/initialize.png)
+- Crawler in action
 ![Screenshot](tutorial/crawling.png)
+- Database created
 ![Screenshot](tutorial/database_created.png)
+- Database content
 ![Screenshot](tutorial/database_content.png)
