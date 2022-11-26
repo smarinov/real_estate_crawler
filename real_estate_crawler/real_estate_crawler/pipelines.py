@@ -18,7 +18,7 @@ class RealEstateCrawlerPipeline:
 
     def create_table(self):
         self.curr.execute("""CREATE TABLE IF NOT EXISTS properties_tb(
-                        listing_id TEXT,
+                        listing_id INT Unique,
                         title TEXT,
                         construction_type TEXT,
                         floor TEXT,
