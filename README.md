@@ -31,4 +31,8 @@ Real estate crawler for https://www.alo.bg
 - Input your starting URL
 - Wait for the crawler to finish and navigate to the created database to access the gathered data
 
+## Tutorial screenshots provided below.
+![Screenshot](tutorial/initialize.png)
 ![Screenshot](tutorial/crawling.png)
+![Screenshot](tutorial/database_created.png)
+![Screenshot](tutorial/database_content.png)
