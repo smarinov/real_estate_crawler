@@ -36,7 +36,7 @@ Real estate crawler for https://www.alo.bg
 ![Screenshot](tutorial/initialize.png)
 - Crawler in action
 ![Screenshot](tutorial/crawling.png)
-- Database created
+- Database created\
 ![Screenshot](tutorial/database_created.png)
 - Database content
 ![Screenshot](tutorial/database_content.png)
