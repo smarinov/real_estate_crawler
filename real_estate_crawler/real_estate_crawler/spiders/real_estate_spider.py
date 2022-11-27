@@ -1,14 +1,24 @@
 import scrapy
 import unicodedata
+from scrapy import signals
+
 from ..items import RealEstateCrawlerItem
 
 
 class RealEstateSpider(scrapy.Spider):
     name = 'RealEstate'
     URL = input('Please input your "ALO.BG" link here: ')
+
     start_urls = [
         URL,
     ]
+
+    @classmethod
+    def from_crawler(cls, crawler, *args, **kwargs):
+        spider = super(RealEstateSpider, cls).from_crawler(crawler, *args, **kwargs)
+        crawler.signals.connect(spider.spider_opened, signal=signals.spider_opened)
+        crawler.signals.connect(spider.spider_closed, signal=signals.spider_closed)
+        return spider
 
     def parse(self, response, **kwargs):
         property_page_links = ['https://www.alo.bg' + x for x in response.xpath("//div[contains(@class, 'item-header')]").css('a::attr("href")').getall()]
@@ -50,3 +60,8 @@ class RealEstateSpider(scrapy.Spider):
         items['url'] = url
         yield items
 
+    def spider_opened(self, spider):
+        print(f'"{spider.name}" started crawling. This may take a while.')
+
+    def spider_closed(self, spider):
+        print(f'"{spider.name}" has successfully finished.')
