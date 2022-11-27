@@ -1,3 +1,5 @@
+import time
+
 import scrapy
 import unicodedata
 from scrapy import signals

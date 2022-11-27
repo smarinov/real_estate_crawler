@@ -5,6 +5,8 @@
 
 
 # useful for handling different item types with a single interface
+import time
+
 from itemadapter import ItemAdapter
 import sqlite3
 
@@ -48,12 +50,17 @@ class RealEstateCrawlerPipeline:
 
     def close_spider(self, spider):
         tsv_request = input('Do you want to export the results in a .tsv file? [Y/N]? ')
+        time.sleep(1)
         if tsv_request == 'N':
             return
         elif tsv_request == 'Y':
             print('Generating .tsv file...')
+            time.sleep(1)
             self.export_in_tsv_format()
-            print('"properties.tsv created. \nYou can open the file via Excel.\nFile Location: ..\\real_estate_crawler\\properties.tsv"')
+            print('"properties.tsv" created.')
+            time.sleep(1)
+            print('File Location: ..\\real_estate_crawler\\properties.tsv\nYou can open the file via Excel.')
+            time.sleep(1)
         else:
             print('Please press "Y" or "N" to proceed.')
             self.close_spider(spider)

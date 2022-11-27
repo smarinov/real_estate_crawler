@@ -9,8 +9,8 @@
 
 BOT_NAME = 'real_estate_crawler'
 
-SPIDER_MODULES = ['real_estate_crawler.spiders']
-NEWSPIDER_MODULE = 'real_estate_crawler.spiders'
+SPIDER_MODULES = ['real_estate_crawler.real_estate_crawler.spiders']
+NEWSPIDER_MODULE = 'real_estate_crawler.real_estate_crawler.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
@@ -44,13 +44,13 @@ DOWNLOAD_DELAY = 0.1
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'real_estate_crawler.middlewares.RealEstateCrawlerSpiderMiddleware': 543,
+#    'real_estate_crawler.real_estate_crawler.middlewares.RealEstateCrawlerSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'real_estate_crawler.middlewares.RealEstateCrawlerDownloaderMiddleware': 543,
+#    'real_estate_crawler.real_estate_crawler.middlewares.RealEstateCrawlerDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -62,7 +62,7 @@ DOWNLOAD_DELAY = 0.1
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'real_estate_crawler.pipelines.RealEstateCrawlerPipeline': 300,
+    'real_estate_crawler.real_estate_crawler.pipelines.RealEstateCrawlerPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
