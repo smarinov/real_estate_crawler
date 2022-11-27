@@ -1,4 +1,4 @@
-# Real Estate Crawler via Scrapy
+# Real Estate Crawler with Scrapy
 Real estate crawler for https://www.alo.bg 
 
 ## How it works?
@@ -30,3 +30,13 @@ Real estate crawler for https://www.alo.bg
 - Type "scrapy crawl RealEstate" in the terminal
 - Input your starting URL
 - Wait for the crawler to finish and navigate to the created database to access the gathered data
+
+## Tutorial screenshots provided below.
+- Initialize
+![Screenshot](tutorial/initialize.png)
+- Crawler in action
+![Screenshot](tutorial/crawling.png)
+- Database created\
+![Screenshot](tutorial/database_created.png)
+- Database content
+![Screenshot](tutorial/database_content.png)
