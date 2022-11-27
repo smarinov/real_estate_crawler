@@ -18,9 +18,11 @@ Real estate crawler for https://www.alo.bg
 - The download delay setting is set to 0.1 seconds so the crawler avoids HTTP 429 Error (Too Many Requests)
 - Crawl through all possible pages and auto stop once it reaches the last page
 - Uses the "unicodedata" library to avoid storing corrupted characters in the database
+- Option to export data to a .tsv file
 
 ## How to set it up?
-- Clone the repository
+- Clone the repository and follow one of the steps below
+### Manually run the project
 - Once you've cloned the inventory, navigate into it
 - Create a virtual environment and activate it:\
 "python -m venv venv"\
@@ -30,3 +32,5 @@ Real estate crawler for https://www.alo.bg
 - Run main.py (python3 main.py)
 - Input your starting URL
 - Wait for the crawler to finish and access the gathered data
+### Automatically run the project
+- Double-click on run.bat file
