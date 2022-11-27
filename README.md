@@ -25,18 +25,8 @@ Real estate crawler for https://www.alo.bg
 - Create a virtual environment and activate it:\
 "python -m venv venv"\
 "source venv/bin/activate"
-- After activating the virtual environment install all of the required packages mentioned in the requirements.txt:\
+- After activating the virtual environment install all the required packages mentioned in the requirements.txt:\
 "pip install -r requirements.txt"
-- Type "scrapy crawl RealEstate" in the terminal
+- Run main.py (python3 main.py)
 - Input your starting URL
-- Wait for the crawler to finish and navigate to the created database to access the gathered data
-
-## Tutorial screenshots provided below.
-- Initialize
-![Screenshot](tutorial/initialize.png)
-- Crawler in action
-![Screenshot](tutorial/crawling.png)
-- Database created\
-![Screenshot](tutorial/database_created.png)
-- Database content
-![Screenshot](tutorial/database_content.png)
+- Wait for the crawler to finish and access the gathered data
