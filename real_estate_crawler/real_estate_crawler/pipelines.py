@@ -15,7 +15,6 @@ class RealEstateCrawlerPipeline:
         self.curr = self.conn.cursor()
         self.create_table()
 
-
     def create_table(self):
         self.curr.execute("""CREATE TABLE IF NOT EXISTS properties_tb(
                         listing_id INT Unique,
@@ -46,3 +45,24 @@ class RealEstateCrawlerPipeline:
     def process_item(self, item, spider):
         self.store_db(item)
         return item
+
+    def close_spider(self, spider):
+        tsv_request = input('Do you want to export the results in a .tsv file? [Y/N]? ')
+        if tsv_request == 'N':
+            return
+        elif tsv_request == 'Y':
+            print('Generating .tsv file...')
+            self.export_in_tsv_format()
+            print('"properties.tsv created. \nYou can open the file via Excel.\nFile Location: ..\\real_estate_crawler\\properties.tsv"')
+        else:
+            print('Please press "Y" or "N" to proceed.')
+            self.close_spider(spider)
+
+    def export_in_tsv_format(self):
+        with open('properties.tsv', 'w+', encoding='utf-16') as file:
+            file.write('ID\tTITLE\tCONSTRUCTION TYPE\tFLOOR\tSQUARE METERS\tCONSTRUCTION YEAR\tPRICE\tLOCATION\tURL')
+            file.write('\n')
+            for row in self.curr.execute('SELECT * FROM properties_tb'):
+                string_data = tuple(map(str, row))
+                file.write('\t'.join(string_data))
+                file.write('\n')
