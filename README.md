@@ -33,4 +33,4 @@ Real estate crawler for https://www.alo.bg
 - Input your starting URL
 - Wait for the crawler to finish and access the gathered data
 ### Automatically run the project
--  Pending implementation. ETA few days
+-  Run "start.bat" file
