@@ -21,16 +21,18 @@ Real estate crawler for https://www.alo.bg
 - Option to export data to a .tsv file
 
 ## How to set it up?
-- Clone the repository and follow one of the steps below
+- Clone the repository
+- Navigate into it and follow one of the steps below
 ### Manually run the project
-- Once you've cloned the inventory, navigate into it
-- Create a virtual environment and activate it:\
-"python -m venv venv"\
-"source venv/bin/activate"
-- After activating the virtual environment install all the required packages mentioned in the requirements.txt:\
+1. Create a virtual environment and activate it:\
+- "python -m venv venv"\
+- "source venv/bin/activate"
+2. After activating the virtual environment install all the required packages mentioned in the requirements.txt:\
 "pip install -r requirements.txt"
-- Run main.py (python3 main.py)
-- Input your starting URL
-- Wait for the crawler to finish and access the gathered data
+3. Run main.py (python3 main.py)
 ### Automatically run the project
--  Run "start.bat" file
+1. Run "start.bat" file
+
+## How to use?
+1. Input your URL
+2. Wait for the crawler to finish and access the gathered data
