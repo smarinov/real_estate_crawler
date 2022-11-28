@@ -24,8 +24,8 @@ Real estate crawler for https://www.alo.bg
 - Clone the repository
 - Navigate into it and follow one of the steps below
 ### Manually run the project
-1. Create a virtual environment and activate it:\
-- "python -m venv venv"\
+1. Create a virtual environment and activate it:
+- "python -m venv venv"
 - "source venv/bin/activate"
 2. After activating the virtual environment install all the required packages mentioned in the requirements.txt:\
 "pip install -r requirements.txt"
